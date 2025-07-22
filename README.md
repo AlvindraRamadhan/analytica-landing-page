@@ -10,7 +10,6 @@ Sebuah landing page modern dan sepenuhnya responsif untuk produk SaaS fiktif ber
 
 ---
 
-![Screenshot Proyek Analytica](SCREENSHOT)
 ![alt text](image.png)
 ![alt text](image-1.png)
 ![alt text](image-2.png)
@@ -40,7 +39,7 @@ Untuk menjalankan proyek ini di mesin lokal Anda, ikuti langkah-langkah berikut:
 
 1.  **Clone repository ini**
     ```sh
-    git clone [https://github.com/AlvindraRamadhan/analytica-landing-page.git](https://github.com/AlvindraRamadhan/analytica-landing-page.git)
+    git clone [https://github.com/AlvindraRamadhan/analytica-landing-page.git]
     ```
 2.  **Masuk ke direktori proyek**
     ```sh
