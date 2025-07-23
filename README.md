@@ -1,45 +1,43 @@
-# Analytica - Landing Page Interaktif
+# Analytica - Landing Page Interaktif (Multi-Page)
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
-Sebuah landing page modern dan sepenuhnya responsif untuk produk SaaS fiktif bernama "Analytica". Proyek ini dibuat untuk menunjukkan kemampuan dalam membangun antarmuka pengguna yang menarik dan fungsional menggunakan teknologi frontend modern.
+Sebuah landing page modern dan sepenuhnya responsif untuk produk SaaS fiktif bernama "Analytica". Awalnya dibangun sebagai _single-page application_, proyek ini kemudian di-refactor menjadi _multi-page application_ menggunakan React Router untuk menangani navigasi antar halaman.
 
 ### [**➡️ Lihat Demo Live ⬅️**](https://AlvindraRamadhan.github.io/analytica-landing-page)
 
 ---
 
-![alt text](./src//assets/image.png)
-![alt text](./src/assets/image-1.png)
-![alt text](./src/assets/image-2.png)
-![alt text](./src/assets/image-3.png)
-![alt text](./src/assets/image-4.png)
+![Screenshot Proyek Analytica](./src/assets/image.png)
+
+_(Untuk menampilkan screenshot, ambil gambar terbaik dari demo live Anda, simpan dengan nama `screenshot.png` di folder utama proyek, lalu commit bersama file lainnya.)_
 
 ## Fitur Utama
 
-- **Desain Sepenuhnya Responsif**: Tampilan yang sempurna di perangkat desktop, tablet, dan mobile, dibangun dengan pendekatan _mobile-first_.
-- **Animasi Halus**: Animasi saat scroll yang elegan menggunakan `Framer Motion` untuk memberikan pengalaman pengguna yang lebih hidup.
-- **Komponen Interaktif**: Termasuk komponen seperti _accordion_ untuk FAQ dan _pricing table_ yang menarik secara visual.
-- **Formulir Kontak Fungsional**: Terintegrasi dengan Formspree untuk penanganan pengiriman formulir tanpa memerlukan backend kustom.
-- **Branding & Desain Kustom**: Menggunakan palet warna dan tipografi yang dipilih secara personal untuk menciptakan identitas visual yang unik.
+- **Navigasi Multi-Halaman**: Menggunakan `React Router` untuk membuat pengalaman pengguna yang natural dengan URL yang unik untuk setiap halaman (`/fitur`, `/harga`, dll).
+- **Desain Sepenuhnya Responsif**: Tampilan sempurna di desktop, tablet, dan mobile.
+- **Animasi Halus**: Animasi saat scroll dan transisi halaman yang elegan menggunakan `Framer Motion`.
+- **Komponen Interaktif**: Termasuk _accordion_ untuk FAQ dan _pricing table_ yang menarik secara visual.
+- **Formulir Kontak Fungsional**: Terintegrasi dengan Formspree untuk penanganan pengiriman formulir.
 
 ## Teknologi yang Digunakan
 
 - **[React.js](https://reactjs.org/)**: Library JavaScript untuk membangun antarmuka pengguna.
-- **[Vite](https://vitejs.dev/)**: Build tool modern yang memberikan pengalaman pengembangan super cepat.
-- **[Tailwind CSS](https://tailwindcss.com/)**: Framework CSS utility-first untuk desain yang cepat dan kustom.
+- **[React Router](https://reactrouter.com/)**: Library standar untuk routing di aplikasi React.
+- **[Vite](https://vitejs.dev/)**: Build tool modern untuk pengalaman pengembangan yang cepat.
+- **[Tailwind CSS](https://tailwindcss.com/)**: Framework CSS utility-first.
 - **[Framer Motion](https://www.framer.com/motion/)**: Library animasi untuk React.
 - **[Lucide React](https://lucide.dev/)**: Library ikon yang bersih dan konsisten.
 - **[Formspree](https://formspree.io/)**: Layanan backend untuk formulir HTML.
 
 ## Instalasi dan Menjalankan Proyek Lokal
 
-Untuk menjalankan proyek ini di mesin lokal Anda, ikuti langkah-langkah berikut:
-
 1.  **Clone repository ini**
     ```sh
-    git clone [https://github.com/AlvindraRamadhan/analytica-landing-page.git]
+    git clone [https://github.com/AlvindraRamadhan/analytica-landing-page.git](https://github.com/AlvindraRamadhan/analytica-landing-page.git)
     ```
 2.  **Masuk ke direktori proyek**
     ```sh
