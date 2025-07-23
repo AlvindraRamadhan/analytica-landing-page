@@ -13,7 +13,6 @@ Sebuah landing page modern dan sepenuhnya responsif untuk produk SaaS fiktif ber
 
 ![Screenshot Proyek Analytica](./src/assets/image.png)
 
-_(Untuk menampilkan screenshot, ambil gambar terbaik dari demo live Anda, simpan dengan nama `screenshot.png` di folder utama proyek, lalu commit bersama file lainnya.)_
 
 ## Fitur Utama
 
