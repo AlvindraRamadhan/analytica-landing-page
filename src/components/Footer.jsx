@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-dark-text text-white py-8">
+    <footer className="bg-dark-bg text-white py-8">
       <div className="container mx-auto px-6 text-center">
         <p>Didesain & Dibuat dengan 💙 oleh Alvindra Ramadhan.</p>
         <div className="mt-4 flex justify-center space-x-6">
@@ -12,7 +12,6 @@ const Footer = () => {
           >
             GitHub
           </a>
-
           <a
             href="https://www.linkedin.com/in/alvindra-ramadhan"
             target="_blank"

@@ -4,7 +4,7 @@ import heroIllustration from "../assets/hero-main.svg";
 
 const Hero = () => {
   return (
-    <section className="pt-32 md:pt-40 pb-20 bg-light-bg dark:bg-dark-text">
+    <section className="pt-32 md:pt-40 pb-20 bg-light-bg dark:bg-dark-bg">
       <div className="container mx-auto px-6 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}

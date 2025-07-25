@@ -26,7 +26,7 @@ const AccordionItem = ({ item, isOpen, onClick }) => {
     <div className="border-b border-gray-200 dark:border-slate-700 py-4">
       <button
         onClick={onClick}
-        className="w-full flex justify-between items-center text-left text-lg font-semibold text-dark-text dark:text-white"
+        className="w-full flex justify-between items-center text-left text-lg font-semibold text-gray-900 dark:text-white"
       >
         <span>{item.question}</span>
         <motion.div
@@ -59,10 +59,10 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section id="faq" className="py-20 bg-white dark:bg-dark-text">
+    <section id="faq" className="py-20 bg-light-bg dark:bg-dark-bg">
       <div className="container mx-auto px-6 max-w-3xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-dark-text dark:text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
             Pertanyaan yang Sering Diajukan
           </h2>
           <p className="mt-4 text-gray-600 dark:text-gray-300">

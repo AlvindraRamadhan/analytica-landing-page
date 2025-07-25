@@ -20,11 +20,10 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    // PERBAIKAN: Menggunakan bg-dark-text agar konsisten
-    <section id="testimonials" className="py-20 bg-light-bg dark:bg-dark-text">
+    <section id="testimonials" className="py-20 bg-white dark:bg-dark-card">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-dark-text dark:text-white">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">
             Apa Kata Mereka Tentang Analytica
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
@@ -35,7 +34,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
-              className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg dark:shadow-slate-900"
+              className="bg-light-bg dark:bg-slate-800 p-8 rounded-xl shadow-lg dark:shadow-slate-950"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
@@ -51,7 +50,7 @@ const Testimonials = () => {
                   className="w-14 h-14 rounded-full mr-4"
                 />
                 <div>
-                  <p className="font-bold text-dark-text dark:text-white">
+                  <p className="font-bold text-gray-900 dark:text-white">
                     {testimonial.name}
                   </p>
                   <p className="text-gray-500 dark:text-gray-400">

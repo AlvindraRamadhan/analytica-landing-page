@@ -44,10 +44,10 @@ const pricingData = [
 
 const Pricing = () => {
   return (
-    <section id="harga" className="py-20 bg-light-bg dark:bg-dark-text">
+    <section id="harga" className="py-20 bg-light-bg dark:bg-dark-bg">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-dark-text dark:text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
             Paket Harga yang Fleksibel
           </h2>
           <p className="mt-4 text-gray-600 dark:text-gray-300">
@@ -64,7 +64,7 @@ const Pricing = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -10, scale: 1.05 }}
-              className={`bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg dark:shadow-slate-900 relative ${
+              className={`bg-white dark:bg-dark-card p-8 rounded-lg shadow-lg dark:shadow-slate-950 relative ${
                 tier.isPopular
                   ? "border-4 border-primary transform md:scale-105"
                   : "border dark:border-slate-700"
@@ -75,11 +75,11 @@ const Pricing = () => {
                   Paling Populer
                 </div>
               )}
-              <h3 className="text-2xl font-bold text-dark-text dark:text-white text-center">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white text-center">
                 {tier.plan}
               </h3>
               <p className="text-center mt-4">
-                <span className="text-4xl font-bold text-dark-text dark:text-white">
+                <span className="text-4xl font-bold text-gray-900 dark:text-white">
                   {tier.price}
                 </span>
                 <span className="text-gray-500 dark:text-gray-400">

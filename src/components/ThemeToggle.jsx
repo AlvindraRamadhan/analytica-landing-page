@@ -2,17 +2,13 @@ import { useState, useEffect } from "react";
 import { Sun, Moon } from "lucide-react";
 
 const ThemeToggle = () => {
-  // Cek tema dari localStorage atau preferensi sistem
   const [isDarkMode, setIsDarkMode] = useState(() => {
-    if (localStorage.theme === "dark") {
-      return true;
-    }
+    if (localStorage.theme === "dark") return true;
     if (
       !("theme" in localStorage) &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
+    )
       return true;
-    }
     return false;
   });
 

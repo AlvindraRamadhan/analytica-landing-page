@@ -4,13 +4,13 @@ import Footer from "../components/Footer";
 
 const RootLayout = () => {
   return (
-    <div className="font-sans">
+    <>
       <Navbar />
       <main>
         <Outlet />
       </main>
       <Footer />
-    </div>
+    </>
   );
 };
 

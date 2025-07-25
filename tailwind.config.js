@@ -5,11 +5,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#7C3AED",
-        secondary: "#06B6D4",
-        "dark-bg": "#0F172A",
-        "dark-text": "#1E293B",
-        "light-bg": "#F8FAFC",
+        primary: "#7C3AED", // Ungu
+        secondary: "#06B6D4", // Cyan
+        "dark-bg": "#0F172A", // Latar belakang utama gelap (slate-900)
+        "dark-card": "#1E293B", // Latar belakang kartu/section sekunder (slate-800)
+        "light-bg": "#F8FAFC", // Latar belakang terang (slate-50)
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],

@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./index.css";
 
+// Import Layout dan Halaman
 import RootLayout from "./layouts/RootLayout.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import FeaturesPage from "./pages/FeaturesPage.jsx";

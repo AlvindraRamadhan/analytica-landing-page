@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section id="kontak" className="py-20 bg-light-bg dark:bg-dark-text">
+    <section id="kontak" className="py-20 bg-white dark:bg-dark-card">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-dark-text dark:text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
             Punya Pertanyaan Lebih Lanjut?
           </h2>
           <p className="mt-4 text-gray-600 dark:text-gray-300">
@@ -19,7 +19,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
-          className="max-w-xl mx-auto bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg dark:shadow-slate-900"
+          className="max-w-xl mx-auto bg-light-bg dark:bg-slate-800 p-8 rounded-lg shadow-lg dark:shadow-slate-950"
         >
           <form
             action="https://formspree.io/f/myzpegjo"
@@ -38,7 +38,7 @@ const Contact = () => {
                 name="name"
                 id="name"
                 required
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-slate-600 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary bg-white dark:bg-slate-700 text-dark-text dark:text-white"
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-slate-600 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary bg-white dark:bg-slate-700 text-gray-900 dark:text-white"
               />
             </div>
             <div>
@@ -53,7 +53,7 @@ const Contact = () => {
                 name="email"
                 id="email"
                 required
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-slate-600 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary bg-white dark:bg-slate-700 text-dark-text dark:text-white"
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-slate-600 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary bg-white dark:bg-slate-700 text-gray-900 dark:text-white"
               />
             </div>
             <div>
@@ -68,7 +68,7 @@ const Contact = () => {
                 id="message"
                 rows="4"
                 required
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-slate-600 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary bg-white dark:bg-slate-700 text-dark-text dark:text-white"
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-slate-600 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary bg-white dark:bg-slate-700 text-gray-900 dark:text-white"
               ></textarea>
             </div>
             <div>
