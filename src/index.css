@@ -1,3 +1,21 @@
+:root {
+  --bg-color: #F8FAFC;
+  --text-color: #1E293B;
+  --card-bg-color: #FFFFFF;
+}
+
+.dark {
+  --bg-color: #0F172A;
+  --text-color: #F8FAFC;
+  --card-bg-color: #1E293B;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

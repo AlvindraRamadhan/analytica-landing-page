@@ -44,13 +44,13 @@ const pricingData = [
 
 const Pricing = () => {
   return (
-    <section id="harga" className="py-20 bg-gray-50">
+    <section id="harga" className="py-20 bg-light-bg dark:bg-dark-text">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-dark-blue">
+          <h2 className="text-3xl md:text-4xl font-bold text-dark-text dark:text-white">
             Paket Harga yang Fleksibel
           </h2>
-          <p className="mt-4 text-gray-600">
+          <p className="mt-4 text-gray-600 dark:text-gray-300">
             Pilih paket yang paling sesuai dengan kebutuhan Anda. Batalkan kapan
             saja.
           </p>
@@ -63,10 +63,11 @@ const Pricing = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`bg-white p-8 rounded-lg shadow-lg relative ${
+              whileHover={{ y: -10, scale: 1.05 }}
+              className={`bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg dark:shadow-slate-900 relative ${
                 tier.isPopular
                   ? "border-4 border-primary transform md:scale-105"
-                  : "border"
+                  : "border dark:border-slate-700"
               }`}
             >
               {tier.isPopular && (
@@ -74,28 +75,32 @@ const Pricing = () => {
                   Paling Populer
                 </div>
               )}
-              <h3 className="text-2xl font-bold text-dark-blue text-center">
+              <h3 className="text-2xl font-bold text-dark-text dark:text-white text-center">
                 {tier.plan}
               </h3>
               <p className="text-center mt-4">
-                <span className="text-4xl font-bold text-dark-blue">
+                <span className="text-4xl font-bold text-dark-text dark:text-white">
                   {tier.price}
                 </span>
-                <span className="text-gray-500">{tier.per}</span>
+                <span className="text-gray-500 dark:text-gray-400">
+                  {tier.per}
+                </span>
               </p>
               <ul className="mt-8 space-y-4">
                 {tier.features.map((feature, fIndex) => (
                   <li key={fIndex} className="flex items-center">
                     <Check className="w-5 h-5 text-secondary mr-3 flex-shrink-0" />
-                    <span className="text-gray-600">{feature}</span>
+                    <span className="text-gray-600 dark:text-gray-300">
+                      {feature}
+                    </span>
                   </li>
                 ))}
               </ul>
               <button
-                className={`w-full mt-8 py-3 rounded-lg font-semibold ${
+                className={`w-full mt-8 py-3 rounded-lg font-semibold transition-colors ${
                   tier.isPopular
-                    ? "bg-primary text-white hover:bg-indigo-700"
-                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                    ? "bg-primary text-white hover:bg-violet-700"
+                    : "bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-slate-600"
                 }`}
               >
                 {tier.plan === "Enterprise" ? "Hubungi Sales" : "Pilih Paket"}

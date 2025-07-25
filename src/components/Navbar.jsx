@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import ThemeToggle from "./ThemeToggle"; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,12 +13,12 @@ const Navbar = () => {
   ];
 
   const activeLinkStyle = {
-    color: "#7C3AED", // Warna 'primary' Anda
+    color: "#7C3AED",
     fontWeight: "600",
   };
 
   return (
-    <nav className="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm">
+    <nav className="bg-white/80 dark:bg-dark-text/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm dark:shadow-gray-800">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold text-primary">
           Analytica
@@ -29,7 +30,7 @@ const Navbar = () => {
               key={link.to}
               to={link.to}
               style={({ isActive }) => (isActive ? activeLinkStyle : undefined)}
-              className="text-gray-700 hover:text-primary transition-colors duration-300"
+              className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors duration-300"
             >
               {link.label}
             </NavLink>
@@ -40,21 +41,27 @@ const Navbar = () => {
           >
             Hubungi Kami
           </NavLink>
+          <ThemeToggle /> 
         </div>
 
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-4">
+          <ThemeToggle /> 
           <button onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? (
+              <X className="w-6 h-6 text-dark-text dark:text-white" />
+            ) : (
+              <Menu className="w-6 h-6 text-dark-text dark:text-white" />
+            )}
           </button>
         </div>
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-white pb-4 shadow-lg">
+        <div className="md:hidden bg-white dark:bg-dark-text pb-4 shadow-lg">
           <div className="flex flex-col items-center space-y-4 pt-4">
             <NavLink
               to="/"
-              className="text-gray-700 hover:text-primary"
+              className="text-gray-700 dark:text-gray-300 hover:text-primary"
               onClick={() => setIsOpen(false)}
             >
               Home
@@ -63,7 +70,7 @@ const Navbar = () => {
               <NavLink
                 key={link.to}
                 to={link.to}
-                className="text-gray-700 hover:text-primary"
+                className="text-gray-700 dark:text-gray-300 hover:text-primary"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
