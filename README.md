@@ -11,11 +11,10 @@ Sebuah landing page modern dan sepenuhnya responsif untuk produk SaaS fiktif ber
 
 ---
 
-![alt text](Screenshot1.png)
-![alt text](Screenshot2.png)
+<img width="1901" height="909" alt="image" src="https://github.com/user-attachments/assets/060f84ec-12e7-4635-ba7a-2aefdba242e0" />
+<img width="1897" height="917" alt="image" src="https://github.com/user-attachments/assets/2bf6d56d-16f8-4521-9a4f-8c4be4c783d8" />
 
-_(**Catatan:** Untuk menampilkan screenshot, ambil gambar terbaik dari demo live Anda, simpan dengan nama `screenshot.png` di folder utama proyek, lalu commit bersama file lainnya.)_
-
+---
 ## Fitur Utama
 
 - **Navigasi Multi-Halaman**: Menggunakan `React Router` untuk menciptakan pengalaman pengguna yang natural dengan URL yang unik untuk setiap halaman.
