@@ -1,37 +1,22 @@
-import React, { useRef, useMemo, useContext, useState } from 'react';
+import React, { useRef, useContext, useState, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial } from '@react-three/drei';
 import * as THREE from 'three';
 import { random } from 'maath';
 import { ThemeContext } from '../contexts/ThemeContext';
+import Robot from './Robot';
 
 function Particles() {
   const { isDarkMode } = useContext(ThemeContext);
   const ref = useRef();
-  const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.5 }));
+  const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 2.5 }));
 
   const particleColor = isDarkMode ? '#8A2BE2' : '#007BFF';
 
   useFrame((state, delta) => {
+    // Simple rotation for the particles
     ref.current.rotation.x -= delta / 10;
     ref.current.rotation.y -= delta / 15;
-
-    // Warp effect on mouse move
-    const { pointer } = state;
-    const t = state.clock.elapsedTime;
-    for (let i = 0; i < sphere.length; i += 3) {
-      const x = sphere[i];
-      const y = sphere[i + 1];
-      const z = sphere[i + 2];
-
-      const distance = Math.sqrt(x*x + y*y + z*z);
-      const warpFactor = 1 + pointer.x * 0.5;
-
-      ref.current.geometry.attributes.position.array[i] = x * warpFactor + Math.sin(t + i) * 0.1;
-      ref.current.geometry.attributes.position.array[i+1] = y * warpFactor + Math.cos(t + i) * 0.1;
-      ref.current.geometry.attributes.position.array[i+2] = z * warpFactor;
-    }
-    ref.current.geometry.attributes.position.needsUpdate = true;
   });
 
   return (
@@ -52,9 +37,15 @@ function Particles() {
 export default function Hero3D() {
   return (
     <div className="absolute top-0 left-0 w-full h-full z-0">
-      <Canvas camera={{ position: [0, 0, 2.5] }}>
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[0, 5, 5]} intensity={1} />
+      <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
+        <ambientLight intensity={0.7} />
+        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} />
+        <directionalLight position={[-10, 10, -10]} intensity={1} color="#A78BFA" />
+        <Suspense fallback={null}>
+          <group scale={1.8} position-y={-1}>
+            <Robot />
+          </group>
+        </Suspense>
         <Particles />
       </Canvas>
     </div>
