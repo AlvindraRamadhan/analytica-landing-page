@@ -1,11 +1,12 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import heroIllustration from "../assets/hero-main.svg";
+import Hero3D from "./Hero3D";
 
 const Hero = () => {
   return (
-    <section className="pt-32 md:pt-40 pb-20 bg-light-bg dark:bg-dark-bg">
-      <div className="container mx-auto px-6 text-center">
+    <section className="relative pt-32 md:pt-40 pb-20 bg-light-bg dark:bg-dark-bg h-screen">
+      <Hero3D />
+      <div className="relative container mx-auto px-6 text-center z-10 pointer-events-none">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -29,18 +30,10 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           href="#harga"
-          className="mt-10 inline-block bg-gradient-primary text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl hover:shadow-primary/40 transition-all duration-300 transform hover:scale-105"
+          className="mt-10 inline-block bg-gradient-primary text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl hover:shadow-primary/40 transition-all duration-300 transform hover:scale-105 pointer-events-auto"
         >
           Mulai Uji Coba Gratis →
         </motion.a>
-        <motion.img
-          src={heroIllustration}
-          alt="Ilustrasi Analisis Data"
-          className="mt-16 mx-auto w-full max-w-4xl"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        />
       </div>
     </section>
   );

@@ -12,11 +12,14 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@react-three/drei": "^10.6.1",
+    "@react-three/fiber": "^9.3.0",
     "framer-motion": "^12.23.6",
     "lucide-react": "^0.525.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router-dom": "^6.25.1"
+    "react-router-dom": "^6.25.1",
+    "three": "^0.179.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
