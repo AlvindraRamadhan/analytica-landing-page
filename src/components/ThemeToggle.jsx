@@ -1,26 +1,9 @@
-import { useState, useEffect } from "react";
+import { useContext } from "react";
 import { Sun, Moon } from "lucide-react";
+import { ThemeContext } from "../contexts/ThemeContext";
 
 const ThemeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    if (localStorage.theme === "dark") return true;
-    if (
-      !("theme" in localStorage) &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    )
-      return true;
-    return false;
-  });
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [isDarkMode]);
+  const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);
 
   return (
     <button
